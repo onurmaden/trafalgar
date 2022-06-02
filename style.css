@@ -52,6 +52,7 @@ body{
     top: 35%;
     left: -4%;
     opacity: 0.3;
+    overflow: hidden;
 }
 #dotdecoration div{
     background: linear-gradient(338.5deg, #97C3F9 -165.6%, #93C1F9 1278.45%) ;
@@ -219,25 +220,8 @@ header ul li:first-child a{
     position: relative;
 
 }
-#dotdecoration2{
-    width: 131.58px;
-    height: 115px;
-    display: flex;
-    position: absolute;
-    flex-wrap: wrap;  
-    top: 157%;
-    left: 77%;
-    opacity: 0.3;
-    z-index: 5;
-}
-#dotdecoration2 div{
-    background: linear-gradient(338.5deg, #97C3F9 -165.6%, #93C1F9 1278.45%) ;
-    border-radius: 50%;
-    width: 10.46px;
-    height: 10.42px;
-    margin-right: 9px;
 
-}
+
 #third_container{
     display: flex;
     flex-direction: column;
@@ -245,8 +229,7 @@ header ul li:first-child a{
 #third_container .section1{
     display: flex;
     flex-direction: row;
-    position: relative;
-    justify-content: flex-start;   
+    position: relative; 
 }
 #third_container .section1 .text{
     margin-left: 80px;
@@ -254,11 +237,14 @@ header ul li:first-child a{
     width: 30%;
 }
 #third_container .img{
+    display: flex;
     flex-shrink: 2;
-    max-width: 650px;
 }
-#third_container .img img{
-    max-width:100% ;
+#third_container img{
+    max-width: 100%;
+    flex-shrink: 2;
+    
+    object-fit: cover;
 }
 #third_container h2{
     font-weight: 700;
@@ -600,6 +586,7 @@ footer .p2 a{
         display: flex;
         position: relative;
         bottom: 4px;
+        margin-right: 10px;
     }
     header ul li a img{
         width: 30px;
@@ -621,10 +608,31 @@ footer .p2 a{
         padding: 0 40px;
     }
     #first_container img{
-        max-width: 400px;
+        max-width: 100%;
         flex-shrink: 1;
+        object-fit: cover;
     }
     footer ul li{
         text-align: center;
+    }
+    #third_container{
+        flex-direction: column;
+        flex-shrink: 1;
+    }
+    #third_container .section1 .text{
+        margin: unset;
+    }
+    #third_container .section2 .text{
+        margin: unset;
+    }
+}
+@media screen and (max-width:500px){
+    #fourth_container .right{
+        width: 100%;
+        margin: unset;
+        margin: 10px 10px;
+    }
+    #fourth_container h2{
+        margin: 20px 10px 0;
     }
 }
